@@ -1,0 +1,25 @@
+{
+  "userDetails": {
+    "name": "Shanmuga Priya",
+    "designation": "Full Stack Engineer"
+  },
+  "contact": [
+    {
+      "id": "1411",
+      "phone": "9840425389",
+      "email": "sandhi@gmail.com",
+      "subject": "react queries",
+      "message": "how to use fetch instead of axios"
+    }
+  ],
+  "images": {
+    "id": 1,
+    "asset": "./src/assets/photo/passport_size_photo.jpg"
+  },
+  "skills": [
+    {
+      "id": "d129",
+      "skill": "Node.JS"
+    }
+  ]
+}

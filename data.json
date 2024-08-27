@@ -10,6 +10,14 @@
       "email": "sandhi@gmail.com",
       "subject": "react queries",
       "message": "how to use fetch instead of axios"
+    },
+    {
+      "id": "83f6",
+      "phone": "9840425389",
+      "email": "smith@mailinator.com",
+      "linkedin": "",
+      "github": "",
+      "address": ""
     }
   ],
   "images": {
@@ -18,8 +26,16 @@
   },
   "skills": [
     {
-      "id": "d129",
-      "skill": "Node.JS"
+      "id": "af07",
+      "skill": "Javascript"
+    },
+    {
+      "skill": "Node",
+      "id": "1a3c"
+    },
+    {
+      "id": "a021",
+      "skill": "Typescript"
     }
   ]
 }

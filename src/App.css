@@ -40,3 +40,27 @@
 .read-the-docs {
   color: #888;
 }
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1517142089942-ba376ce32a19?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyNjUyOXwwfDF8c2VhcmNofDF8fGRldmVsb3BlcnxlbnwwfHx8fDE2OTMyOTcwMDE&ixlib=rb-1.2.1&q=80&w=1080');
+  background-size: cover;
+  background-position: center;
+  color: #e0e0e0;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff;
+}
+
+p, a {
+  color: #cccccc;
+}
+
+.container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}

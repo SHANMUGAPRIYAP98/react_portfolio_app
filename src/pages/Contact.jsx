@@ -1,18 +1,44 @@
 import axios from "axios";
+import { useEffect, useState } from "react";
 import Layout from "../components/Layout";
-
 export default function Contact() {
+
+  const [contact, setContact] = useState({
+    phone: "",
+    email: "",
+    linkedin: "",
+    github: "",
+    address: ""
+  })
+
+  const fetchContact = async () => {
+    try {
+      const response = await axios.get("http://localhost:3000/contact");
+      setContact(response.data);
+    } catch (error) {
+      console.error("Error fetching contact:", error);
+    }
+  };
+
+
+  useEffect(() => {
+    fetchContact();
+  }, []);
+
+
   const onHandleSubmit = async (e) => {
     e.preventDefault();
     const formData = {
       phone: e.target.phone.value,
       email: e.target.email.value,
-      subject: e.target.subject.value,
-      message: e.target.message.value,
+      linkedin: e.target.linkedin.value,
+      github: e.target.github.value,
+      address: e.target.address.value
     };
 
     try {
       await axios.post("http://localhost:3000/contact", formData);
+      fetchContact()
       alert("Contact information submitted successfully!");
     } catch (error) {
       console.error("Error:", error);
@@ -44,6 +70,9 @@ export default function Contact() {
                 className="w-full p-3 mt-2 text-gray-900 bg-gray-100 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-600 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-purple-500"
                 placeholder="944-155-1256"
                 required
+                onChange={(e) =>
+                  setContact({ ...contact, phone: e.target.value })
+                }
               />
             </div>
             <div>
